@@ -16,6 +16,22 @@ function Corner({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
   return <div className={styles[position]} />;
 }
 
+const llm = [
+  '  "The cat sat on the ___"  ',
+  "                             ",
+  "  [The] [cat] [sat] [on] [the]",
+  "    │     │     │    │     │  ",
+  "    ▼     ▼     ▼    ▼     ▼  ",
+  "  ╔══════════════════════════╗",
+  "  ║   self-attention  × 96   ║",
+  "  ╚══════════════════════════╝",
+  "               │              ",
+  "  ▸ mat ████████████████░░ .82",
+  "    rug █████░░░░░░░░░░░░░ .09",
+  "    bed ███░░░░░░░░░░░░░░░ .05",
+  "    hat █░░░░░░░░░░░░░░░░░ .02",
+];
+
 export default function Home() {
   const [visible, setVisible] = useState(false);
 
@@ -32,12 +48,19 @@ export default function Home() {
       <Corner position="br" />
 
       <main
-        className="flex flex-col items-center gap-6 px-8 transition-all duration-700"
+        className="flex flex-col items-center gap-8 px-4 transition-all duration-700"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(8px)",
         }}
       >
+        <pre
+          className="text-[10px] leading-relaxed sm:text-xs select-none"
+          style={{ color: "var(--fg-dim)" }}
+        >
+          {llm.join("\n")}
+        </pre>
+
         <div className="flex flex-col items-center gap-3 text-center">
           <h1
             className="text-2xl tracking-wide sm:text-3xl"
@@ -70,7 +93,7 @@ export default function Home() {
           href="https://www.github.com/lahfir"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 text-xs tracking-[0.25em] uppercase transition-colors duration-300 hover:text-white"
+          className="mt-2 text-xs tracking-[0.25em] uppercase transition-colors duration-300 hover:text-white"
           style={{ color: "var(--fg-dim)" }}
         >
           github
