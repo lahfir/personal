@@ -66,8 +66,18 @@ export default function Home() {
           </p>
         </div>
 
+        <a
+          href="https://www.github.com/lahfir"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 text-xs tracking-[0.25em] uppercase transition-colors duration-300 hover:text-white"
+          style={{ color: "var(--fg-dim)" }}
+        >
+          github
+        </a>
+
         <p
-          className="mt-4 text-xs tracking-[0.25em] uppercase"
+          className="text-xs tracking-[0.25em] uppercase"
           style={{ color: "var(--fg-dim)" }}
         >
           website underway
