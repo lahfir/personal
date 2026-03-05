@@ -24,8 +24,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-geist-mono), monospace;
-  overflow: hidden;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 body::after {
