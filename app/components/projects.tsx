@@ -76,6 +76,12 @@ const SECTIONS: Section[] = [
     title: "projects",
     items: [
       {
+        name: "pilot",
+        desc: "Multi-agent autonomous automation framework with 99%+ accuracy via accessibility APIs, computer vision, OCR, and vision LLMs",
+        tech: "Python",
+        url: "https://github.com/lahfir/pilot",
+      },
+      {
         name: "agent-desktop",
         desc: "Desktop automation CLI for AI agents via OS accessibility trees",
         tech: "Rust",
